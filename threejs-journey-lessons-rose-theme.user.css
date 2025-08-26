@@ -1,0 +1,160 @@
+/* ==UserStyle==threejs-journey-lessons-rose-theme
+@name       threejs-journey-lessons-rose-theme
+@namespace    github.com/openstyles/stylus
+@version     2.0.0
+@description   Custom style for the lessons pages of the Three.js Journey course
+@author      Tuscan-blue
+==/UserStyle== */
+@-moz-document regexp("^https:\\/\\/threejs-journey\\.com\\/lessons\\/.*") {
+
+	/* 全局与页面背景 */
+	html.is-theme-dark {
+		background: white !important;
+		color: black !important;
+	}
+
+	.page.lessons {
+		background-color: white !important;
+	}
+
+	/* 文字 */
+	.text {
+		color: black !important;
+	}
+	.text p code,
+	.text li code,
+	.page.lessons .lessons-list .chapter .title,
+	.page.lessons .end,
+	.text p a:not(.button),
+	.text li a:not(.button),
+	.page.lessons .lessons-list .lesson .link .badge,
+	.page.lessons .lessons-list .chapter .progress .percentage,
+	.page.lessons .lessons-list .lesson .status .icon .active,
+	.page.lessons .lessons-list .lesson .status .icon .done,
+	.page.lessons .tabs .tabs-mover .tabs-target .links .link.is-active .dot .disc,
+	.page.lessons .tabs .tabs-mover .tabs-target .table-of-content .link.is-active .dot .disc,
+	.page.lessons .tabs .tabs-mover .tabs-target .links .link .dot .check svg *,
+	.page.lessons .tabs .tabs-mover .tabs-target .table-of-content .link .dot .check svg *,
+	.page.lessons .main .details .aside .files .starter .label,
+	.button.is-white .label,
+	.button.is-gray,
+	.header .links .link .highlight,
+	.button.is-discord,
+	.header .menu .links .category,
+	.main-logo .logo svg path,
+	.player .controls,
+	.page.lessons .main .details .aside .title .icon svg *,
+	.page.lessons .main .details .informations .sibling .arrow svg * {
+		filter: hue-rotate(60deg) saturate(50%) brightness(120%);
+	}
+
+	/* details 面板 */
+	.details {
+		background: #f4eaee !important;
+		color: black;
+	}
+
+	.page.lessons .main .details .aside .title .icon svg *,
+	.page.lessons .main .details .informations .sibling .arrow svg * {
+		fill: rgb(112, 93, 242, .667) !important;
+	}
+
+	.page.lessons .main .details .informations .current-lesson .difficulty .value {
+		border: 1px solid black !important;
+	}
+
+	.page.lessons .main .details .aside {
+		border-bottom-right-radius: 15px;
+		border-bottom-left-radius: 0 !important;
+		border-top-left-radius: 0 !important;
+	}
+
+	.page.lessons .main .details .informations .sibling .sibling-link .sibling-info {
+		background: black !important;
+		color: #f4eaee !important;
+	}
+
+	/* 代码块 */
+	.text :not(pre) > code[class*=language-],
+	.text pre[class*=language-] {
+		background: rgb(39, 38, 45) !important;
+		filter: hue-rotate(160deg) saturate(50%) brightness(120%);
+	}
+	.text:not(.links) > pre {
+		border-radius: 5px;
+		margin: 20px 0;
+	}
+
+	/* 卡片 */
+	.card .card-head,
+	.card .card-body {
+		background: #f4eaee !important;
+	}
+
+	/* 按钮 */
+	.button.is-gray {
+		background: rgba(112, 93, 242, .667) !important;
+	}
+
+	/* 选中 */
+	::selection {
+		background: #98778ce0 !important;
+	}
+
+	/* 视频播放器 */
+	.video-area .overlay {
+		background: transparent !important;
+		border-radius: 5px;
+	}
+	.player .controls {
+		color: white !important;
+	}
+	.non-important,
+	js-rate-value,
+	.separator,
+	.page.lessons .tabs .tabs-mover .scroll-mover,
+	.player .controls .time .duration,
+	.player .controls .rate .button.is-current .label .text {
+		color: white !important;
+	}
+
+	/* 页眉 */
+	html.is-theme-dark.header {
+		background: black !important;
+	}
+	.header .links .link,
+	.header .actions .logout-button {
+		color: white !important;
+	}
+
+	/* 图片与视频 */
+	.text .is-image,
+	.text .video {
+		max-width: 1250px;
+		margin: 20px auto;
+	}
+	.text .is-image .image-inner img.is-loaded {
+		border: 2px dashed rgb(219, 155, 196);
+		border-radius: 5px;
+		margin: 20px auto;
+	}
+
+	/* 大屏优化 */
+	@media screen and (min-width:1600px) {
+		.page.lessons .main .content .text:not(.links) > h2,
+		.page.lessons .main .content .text:not(.links) > h3,
+		.page.lessons .main .content .text:not(.links) > h4,
+		.page.lessons .main .content .text:not(.links) > h5,
+		.page.lessons .main .content .text:not(.links) > .h2,
+		.page.lessons .main .content .text:not(.links) > .h3,
+		.page.lessons .main .content .text:not(.links) > .h4,
+		.page.lessons .main .content .text:not(.links) > .h5,
+		.page.lessons .main .content .text:not(.links) > ul,
+		.page.lessons .main .content .text:not(.links) > ol,
+		.page.lessons .main .content .text:not(.links) > p:not(.is-image),
+		.page.lessons .main .content .text:not(.links) > pre {
+			margin-left: 45px;
+			margin-right: 45px;
+		}
+	}
+}
