@@ -143,7 +143,7 @@
 	.video-jump {
 		border: 2px solid black !important;
 	}
-	.video-jump .play svg {
+	.video-jump .play svg * {
 		fill: black;
 	}
 
