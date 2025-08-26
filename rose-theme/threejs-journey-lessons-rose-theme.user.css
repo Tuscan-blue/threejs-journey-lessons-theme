@@ -110,7 +110,7 @@
 		color: white !important;
 	}
 	.non-important,
-	js-rate-value,
+	.js-rate-value,
 	.separator,
 	.page.lessons .tabs .tabs-mover .scroll-mover,
 	.player .controls .time .duration,
@@ -137,6 +137,14 @@
 		border: 2px dashed rgb(219, 155, 196);
 		border-radius: 5px;
 		margin: 20px auto;
+	}
+
+    /* 链接	*/
+	.video-jump {
+		border: 2px solid black !important;
+	}
+	.video-jump .play svg {
+		fill: black;
 	}
 
 	/* 大屏优化 */
